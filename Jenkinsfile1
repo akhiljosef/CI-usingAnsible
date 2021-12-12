@@ -29,7 +29,7 @@ pipeline {
                  
              
                
-               sh "ansible-playbook ansible.yml -i inventories/dev/hosts --user root --key-file .ssh/id_rsa" 
+               sh "ansible-playbook ansible.yml -i inventories/dev/hosts" 
                
             
             }
