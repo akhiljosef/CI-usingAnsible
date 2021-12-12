@@ -22,6 +22,17 @@ pipeline {
                 sh 'mvn package'             
           }
         }
+        stage('Host reacable') {
+             
+            steps {
+                 
+             
+               
+               sh "ansible all -i inventories/dev/hosts -m ping " 
+               
+            
+            }
+        }
         stage('Ansible Deploy') {
              
             steps {

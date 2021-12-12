@@ -1,2 +1,2 @@
 [all]
-192.168.0.20
+192.168.0.20 ansible_user=root ansible_password=akhil#123
