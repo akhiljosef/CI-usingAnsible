@@ -28,7 +28,7 @@ pipeline {
                  
              
                
-               sh "ansible.yml -i inventories/dev/hosts --user root 
+               sh "ansible.yml -i inventories/dev/hosts -u root -k " 
                
             
             }
