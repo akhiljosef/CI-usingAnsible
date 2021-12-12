@@ -16,5 +16,12 @@ pipeline {
               sh 'ansible --version'
             }
        }
+       stage('Execute Maven') {
+           steps {
+             
+                sh 'mvn package'             
+          }
+        }
+
     }
 }
