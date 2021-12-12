@@ -1,7 +1,7 @@
 ---
 
 - name: Ansible configrution
-  hosts: test
+  
 
   tasks:
   - name: Install Java 1.7
