@@ -22,17 +22,17 @@ pipeline {
                 sh 'mvn package'             
           }
         }
-        stage('Host reacable') {
+        #stage('Host reacable') {
              
-            steps {
+            #steps {
                  
              
                
-               sh "ansible all -i inventories/dev/hosts -m ping -u root " 
+             #  sh "ansible all -i inventories/dev/hosts -m ping -u root " 
                
             
-            }
-        }
+           # }
+        #}
         stage('Ansible Deploy') {
              
             steps {
