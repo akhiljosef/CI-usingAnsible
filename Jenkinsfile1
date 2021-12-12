@@ -28,7 +28,7 @@ pipeline {
                  
              
                
-              sh "ansible all -i inventories/dev/hosts -m ping -u root " 
+              sh "ansible all -i inventories/dev/hosts -m ping --user root --key-file .ssh/id_rsa" 
                
             
             }
