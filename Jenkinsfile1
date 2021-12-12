@@ -22,14 +22,24 @@ pipeline {
                 sh 'mvn package'             
           }
         }
-        
+        stage('Host reacable') {
+             
+            steps {
+                 
+             
+               
+              sh "ansible all -i inventories/dev/hosts -m ping -u root " 
+               
+            
+            }
+        }
         stage('Ansible Deploy') {
              
             steps {
                  
              
                
-               sh "ansible-playbook ansible.yml -i inventories/dev/hosts " 
+               sh "ansible-playbook ansible.yml -i inventories/dev/hosts --user root --key-file .ssh/id_rsa" 
                
             
             }
