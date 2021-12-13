@@ -29,7 +29,7 @@ pipeline {
                  
              
                
-               sh "ansible-playbook ansible.yml -i inventories/dev/hosts" 
+               sh "ansible-playbook ansible.yml -i inventories/dev/hosts -u test" 
                
             
             }

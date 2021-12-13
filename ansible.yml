@@ -3,7 +3,7 @@
 - name: Ansible configrution
   hosts: [all]
   become: true
-  become_user: root
+  remote_user: root
 
   tasks:
   - name: Install Java 1.7
